@@ -1,0 +1,57 @@
+{
+  "Lovable 使い方": [
+    {"keyword": "Lovable 始め方 2026", "priority": "high", "status": "pending"},
+    {"keyword": "Lovable 無料版でできること", "priority": "high", "status": "pending"},
+    {"keyword": "Lovable プロンプトの書き方", "priority": "high", "status": "pending"},
+    {"keyword": "Lovable アプリ開発 初心者ガイド", "priority": "medium", "status": "pending"},
+    {"keyword": "Lovable GitHub連携 使い方", "priority": "medium", "status": "pending"}
+  ],
+  "Lovable 料金・プラン": [
+    {"keyword": "Lovable 料金プラン 2026 最新", "priority": "high", "status": "pending"},
+    {"keyword": "Lovable 無料 有料 違い", "priority": "high", "status": "pending"},
+    {"keyword": "Lovable クレジット 仕組み", "priority": "high", "status": "pending"},
+    {"keyword": "Lovable Pro プラン 機能一覧", "priority": "medium", "status": "pending"}
+  ],
+  "Lovable vs Bolt.new": [
+    {"keyword": "Lovable Bolt.new 比較 2026", "priority": "high", "status": "pending"},
+    {"keyword": "Lovable vs Bolt.new どっちがいい", "priority": "high", "status": "pending"},
+    {"keyword": "Lovable Bolt.new 料金 比較", "priority": "medium", "status": "pending"},
+    {"keyword": "AIアプリビルダー 乗り換え ガイド", "priority": "medium", "status": "pending"}
+  ],
+  "Lovable 最新ニュース": [
+    {"keyword": "Lovable 最新アップデート 2026", "priority": "high", "status": "pending"},
+    {"keyword": "Lovable 新機能 まとめ", "priority": "high", "status": "pending"},
+    {"keyword": "Lovable GPT-Engineer 名称変更", "priority": "high", "status": "pending"},
+    {"keyword": "Lovable 資金調達 成長", "priority": "medium", "status": "pending"},
+    {"keyword": "バイブコーディング 市場動向 2026", "priority": "medium", "status": "pending"}
+  ],
+  "バイブコーディング": [
+    {"keyword": "バイブコーディングとは 完全解説", "priority": "high", "status": "pending"},
+    {"keyword": "バイブコーディング やり方 入門", "priority": "high", "status": "pending"},
+    {"keyword": "バイブコーディング メリット デメリット", "priority": "high", "status": "pending"},
+    {"keyword": "vibe coding 日本語で始める方法", "priority": "medium", "status": "pending"},
+    {"keyword": "バイブコーディング プロンプト集", "priority": "medium", "status": "pending"}
+  ],
+  "Lovable テクニック": [
+    {"keyword": "Lovable Supabase 連携ガイド", "priority": "high", "status": "pending"},
+    {"keyword": "Lovable Stripe 決済実装", "priority": "high", "status": "pending"},
+    {"keyword": "Lovable デプロイ方法 完全ガイド", "priority": "high", "status": "pending"},
+    {"keyword": "Lovable カスタムドメイン 設定", "priority": "medium", "status": "pending"},
+    {"keyword": "Lovable レスポンシブ デザイン コツ", "priority": "medium", "status": "pending"},
+    {"keyword": "Lovable API連携 外部サービス", "priority": "medium", "status": "pending"}
+  ],
+  "AIアプリビルダー比較": [
+    {"keyword": "AIアプリビルダー おすすめ 2026", "priority": "high", "status": "pending"},
+    {"keyword": "Lovable vs Replit Agent 比較", "priority": "high", "status": "pending"},
+    {"keyword": "Lovable vs v0 比較", "priority": "medium", "status": "pending"},
+    {"keyword": "ノーコード AI開発 ツール比較", "priority": "medium", "status": "pending"},
+    {"keyword": "フルスタック 自動生成 AI ランキング", "priority": "medium", "status": "pending"}
+  ],
+  "Lovable 活用事例": [
+    {"keyword": "Lovable SaaS開発 事例集", "priority": "high", "status": "pending"},
+    {"keyword": "Lovable ポートフォリオ 作成", "priority": "high", "status": "pending"},
+    {"keyword": "Lovable LP ランディングページ 作成", "priority": "medium", "status": "pending"},
+    {"keyword": "Lovable 副業 アプリ開発", "priority": "medium", "status": "pending"},
+    {"keyword": "Lovable 業務効率化 ツール作成", "priority": "medium", "status": "pending"}
+  ]
+}
