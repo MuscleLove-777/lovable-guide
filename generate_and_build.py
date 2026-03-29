@@ -62,6 +62,8 @@ def run(config, prompts=None):
             response_text = response_text.strip()
 
         data = json.loads(response_text)
+        if isinstance(data, list):
+            data = data[0]
         category = data["category"]
         keyword = data["keyword"]
         logger.info("選定結果 - カテゴリ: %s, キーワード: %s", category, keyword)
