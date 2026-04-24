@@ -2,170 +2,34 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lovableバイブコーディング完全ガイド</title>
-    <link>https://musclelove-777.github.io/lovable-guide</link>
+    <link>https://musclelove-777.github.io/lovable-guide/</link>
     <description>AIアプリビルダーLovableの使い方・最新機能・Bolt.new比較を毎日更新。コード不要でフルスタックアプリを作る方法を完全解説。</description>
     <language>ja</language>
-    <lastBuildDate>Wed, 22 Apr 2026 05:29:55 +0900</lastBuildDate>
-    <atom:link href="https://musclelove-777.github.io/lovable-guide/feed.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>Sat, 25 Apr 2026 00:34:57 +0900</lastBuildDate>
+    <atom:link href="https://musclelove-777.github.io/lovable-guide//feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>2026年版 Lovable使い方完全ガイド：初心者も爆速アプリ開発！</title>
-      <link>https://musclelove-777.github.io/lovable-guide/articles/lovable-tsukaikata-complete-guide-2026.html</link>
-      <guid>https://musclelove-777.github.io/lovable-guide/articles/lovable-tsukaikata-complete-guide-2026.html</guid>
+      <link>https://musclelove-777.github.io/lovable-guide//articles/lovable-tsukaikata-complete-guide-2026.html</link>
+      <guid>https://musclelove-777.github.io/lovable-guide//articles/lovable-tsukaikata-complete-guide-2026.html</guid>
       <description></description>
       <category>Lovable 使い方</category>
-      <pubDate>Wed, 22 Apr 2026 00:00:00 +0900</pubDate>
+      <pubDate>Sat, 25 Apr 2026 00:00:00 +0900</pubDate>
     </item>
     <item>
       <title>Lovableの使い方2026年版！AIアプリ開発を最速で始める完全ガイド</title>
-      <link>https://musclelove-777.github.io/lovable-guide/articles/lovable-tsukaikata-2026-ai-app-development-guide.html</link>
-      <guid>https://musclelove-777.github.io/lovable-guide/articles/lovable-tsukaikata-2026-ai-app-development-guide.html</guid>
+      <link>https://musclelove-777.github.io/lovable-guide//articles/lovable-tsukaikata-2026-ai-app-development-guide.html</link>
+      <guid>https://musclelove-777.github.io/lovable-guide//articles/lovable-tsukaikata-2026-ai-app-development-guide.html</guid>
       <description></description>
       <category>Lovable 使い方</category>
-      <pubDate>Wed, 22 Apr 2026 00:00:00 +0900</pubDate>
+      <pubDate>Sat, 25 Apr 2026 00:00:00 +0900</pubDate>
     </item>
     <item>
       <title>2026年最新！Lovable 使い方完全ガイド：初心者からプロまで</title>
-      <link>https://musclelove-777.github.io/lovable-guide/articles/lovable-tsukaikata-complete-guide-2026.html</link>
-      <guid>https://musclelove-777.github.io/lovable-guide/articles/lovable-tsukaikata-complete-guide-2026.html</guid>
+      <link>https://musclelove-777.github.io/lovable-guide//articles/lovable-tsukaikata-complete-guide-2026.html</link>
+      <guid>https://musclelove-777.github.io/lovable-guide//articles/lovable-tsukaikata-complete-guide-2026.html</guid>
       <description></description>
       <category>Lovable 使い方</category>
-      <pubDate>Wed, 22 Apr 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>2026年最新版！Lovable使い方完全ガイド：AIアプリ開発を最速マスター</title>
-      <link>https://musclelove-777.github.io/lovable-guide/articles/2026lovableai.html</link>
-      <guid>https://musclelove-777.github.io/lovable-guide/articles/2026lovableai.html</guid>
-      <description></description>
-      <category>Lovable 使い方</category>
-      <pubDate>Wed, 22 Apr 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>2026年版 Lovable 使い方完全ガイド！AIアプリ開発を最速で始める</title>
-      <link>https://musclelove-777.github.io/lovable-guide/articles/lovable-tsukaikata-complete-guide-2026.html</link>
-      <guid>https://musclelove-777.github.io/lovable-guide/articles/lovable-tsukaikata-complete-guide-2026.html</guid>
-      <description></description>
-      <category>Lovable 使い方</category>
-      <pubDate>Wed, 22 Apr 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>Lovable 使い方 2026年最新版！爆速アプリ開発完全ガイド</title>
-      <link>https://musclelove-777.github.io/lovable-guide/articles/lovable-2026.html</link>
-      <guid>https://musclelove-777.github.io/lovable-guide/articles/lovable-2026.html</guid>
-      <description></description>
-      <category>Lovable 使い方</category>
-      <pubDate>Wed, 22 Apr 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>2026年最新！Lovable 使い方徹底解説 – AIアプリ開発を爆速化</title>
-      <link>https://musclelove-777.github.io/lovable-guide/articles/lovable-tsukaikata-guide-2026.html</link>
-      <guid>https://musclelove-777.github.io/lovable-guide/articles/lovable-tsukaikata-guide-2026.html</guid>
-      <description></description>
-      <category>Lovable 使い方</category>
-      <pubDate>Wed, 22 Apr 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>2026年 Lovable使い方: 最速AIアプリ開発ガイド</title>
-      <link>https://musclelove-777.github.io/lovable-guide/articles/lovable-tsukaikata-guide-2026.html</link>
-      <guid>https://musclelove-777.github.io/lovable-guide/articles/lovable-tsukaikata-guide-2026.html</guid>
-      <description></description>
-      <category>Lovable 使い方</category>
-      <pubDate>Wed, 22 Apr 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>2026年最新！Lovable 使い方 完全ガイド：初心者からプロまで爆速アプリ開発</title>
-      <link>https://musclelove-777.github.io/lovable-guide/articles/lovable-tsukaikata-guide-2026.html</link>
-      <guid>https://musclelove-777.github.io/lovable-guide/articles/lovable-tsukaikata-guide-2026.html</guid>
-      <description></description>
-      <category>Lovable 使い方</category>
-      <pubDate>Wed, 22 Apr 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>Lovable 使い方 2026年版: 初心者でもプロ級アプリ開発！</title>
-      <link>https://musclelove-777.github.io/lovable-guide/articles/lovable-tsukaikata-2026-guide.html</link>
-      <guid>https://musclelove-777.github.io/lovable-guide/articles/lovable-tsukaikata-2026-guide.html</guid>
-      <description></description>
-      <category>Lovable 使い方</category>
-      <pubDate>Wed, 22 Apr 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>【2026年版】Lovable 使い方完全ガイド！初心者でもAIアプリ開発を最速で</title>
-      <link>https://musclelove-777.github.io/lovable-guide/articles/lovable-tsukaikata-complete-guide-2026.html</link>
-      <guid>https://musclelove-777.github.io/lovable-guide/articles/lovable-tsukaikata-complete-guide-2026.html</guid>
-      <description></description>
-      <category>Lovable 使い方</category>
-      <pubDate>Wed, 22 Apr 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>2026年最新版！Lovable 使い方完全ガイド：初心者からプロまで爆速アプリ開発</title>
-      <link>https://musclelove-777.github.io/lovable-guide/articles/lovable-tsukaikata-complete-guide-2026.html</link>
-      <guid>https://musclelove-777.github.io/lovable-guide/articles/lovable-tsukaikata-complete-guide-2026.html</guid>
-      <description></description>
-      <category>Lovable 使い方</category>
-      <pubDate>Wed, 22 Apr 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>2026年最新！Lovable 使い方完全ガイド：バイブコーディングで即アプリ開発</title>
-      <link>https://musclelove-777.github.io/lovable-guide/articles/2026lovable.html</link>
-      <guid>https://musclelove-777.github.io/lovable-guide/articles/2026lovable.html</guid>
-      <description></description>
-      <category>Lovable 使い方</category>
-      <pubDate>Wed, 22 Apr 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>2026年最新！Lovableの使い方完全ガイド - AIアプリ開発を爆速化</title>
-      <link>https://musclelove-777.github.io/lovable-guide/articles/lovable-tsukaikata-guide-2026.html</link>
-      <guid>https://musclelove-777.github.io/lovable-guide/articles/lovable-tsukaikata-guide-2026.html</guid>
-      <description></description>
-      <category>Lovable 使い方</category>
-      <pubDate>Wed, 22 Apr 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>【2026年最新】Lovable 使い方 完全ガイド！初心者も爆速AIアプリ開発</title>
-      <link>https://musclelove-777.github.io/lovable-guide/articles/lovable-tsukaikata-complete-guide-2026.html</link>
-      <guid>https://musclelove-777.github.io/lovable-guide/articles/lovable-tsukaikata-complete-guide-2026.html</guid>
-      <description></description>
-      <category>Lovable 使い方</category>
-      <pubDate>Wed, 22 Apr 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>Lovable 使い方2026年版: 初心者でも即戦力アプリを爆速開発！</title>
-      <link>https://musclelove-777.github.io/lovable-guide/articles/lovable-tsukaikata-2026-guide.html</link>
-      <guid>https://musclelove-777.github.io/lovable-guide/articles/lovable-tsukaikata-2026-guide.html</guid>
-      <description></description>
-      <category>Lovable 使い方</category>
-      <pubDate>Wed, 22 Apr 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>2026年最新版！Lovable使い方完全ガイド：秒速AIアプリ開発</title>
-      <link>https://musclelove-777.github.io/lovable-guide/articles/lovable-tsukaikata-guide-2026-saishin.html</link>
-      <guid>https://musclelove-777.github.io/lovable-guide/articles/lovable-tsukaikata-guide-2026-saishin.html</guid>
-      <description></description>
-      <category>Lovable 使い方</category>
-      <pubDate>Wed, 22 Apr 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>2026年版 Lovable使い方完全ガイド：AIで爆速アプリ開発</title>
-      <link>https://musclelove-777.github.io/lovable-guide/articles/lovable-tsukaikata-guide-2026.html</link>
-      <guid>https://musclelove-777.github.io/lovable-guide/articles/lovable-tsukaikata-guide-2026.html</guid>
-      <description></description>
-      <category>Lovable 使い方</category>
-      <pubDate>Wed, 22 Apr 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>Lovable 使い方 2026年版：最速AIアプリ開発ガイド</title>
-      <link>https://musclelove-777.github.io/lovable-guide/articles/lovable-tsukaikata-complete-guide-2026.html</link>
-      <guid>https://musclelove-777.github.io/lovable-guide/articles/lovable-tsukaikata-complete-guide-2026.html</guid>
-      <description></description>
-      <category>Lovable 使い方</category>
-      <pubDate>Wed, 22 Apr 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>2026年最新！Lovableの使い方を徹底解説〜AIアプリ開発完全ガイド〜</title>
-      <link>https://musclelove-777.github.io/lovable-guide/articles/lovable-tsukaikata-guide-2026.html</link>
-      <guid>https://musclelove-777.github.io/lovable-guide/articles/lovable-tsukaikata-guide-2026.html</guid>
-      <description></description>
-      <category>Lovable 使い方</category>
-      <pubDate>Wed, 22 Apr 2026 00:00:00 +0900</pubDate>
+      <pubDate>Sat, 25 Apr 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>
