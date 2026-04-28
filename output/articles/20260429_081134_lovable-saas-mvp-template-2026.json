@@ -1,0 +1,40 @@
+{
+  "title": "Lovable AI で作るSaaS MVP 完全テンプレート2026",
+  "content": "# Lovable AI で作るSaaS MVP 完全テンプレート2026\n\n## この記事でわかること\n- Lovable で SaaS の MVP を最短で立ち上げるためのテンプレ手順\n- ランディング・認証・課金・管理画面を分割して指示する設計術\n- 検証フェーズで捨てやすいコード構造の作り方\n\n## 結論\nLovable は「自然言語ベースで UI とフロントロジックを高速に作る」用途に特化しているため、SaaS MVP のフロント部分とランディングを 1〜2 日でまとめて作るのに向きます。逆にバックエンドの複雑なロジックは Supabase Edge Functions など外部に逃がす設計のほうが手戻りが少なくなります。\n\n## 本題\n### Lovable で MVP を作る際の構成図\n中級者向けに、最初に頭に置いておく構成は次の4ブロックです。\n\n1. **公開ランディング**: 機能紹介・料金・お問い合わせ\n2. **認証**: メール+パスワード or Magic Link\n3. **ダッシュボード**: ユーザーが日々触る本体機能\n4. **課金**: Stripe Checkout への誘導と Webhook ハンドラ\n\nLovable は1〜3を得意としますが、4 の Webhook 処理は Supabase Edge Functions または Vercel Serverless に切り出すのが無難です。\n\n### ステップ1: ランディングを先に作る\nSaaS は「売れるかどうか」を最初に検証するのが目的なので、ランディングを最初に出します。プロンプト例:\n\n```\nB2B 向けの議事録自動要約 SaaS のランディングページを作ってください。\nセクション: ヒーロー / 課題 / 機能3つ / 料金プラン3つ / FAQ / CTA\nトーン: 落ち着いた紺＋アクセントオレンジ、スクショ風モックを2枚配置\nCTA: 「無料で試す」ボタンで /signup へ遷移\n```\n\nランディング段階では認証も DB も不要なので、純粋にコピーとデザインの調整だけに集中できます。\n\n### ステップ2: 認証フローを Supabase で組む\nLovable の AI チャットに「Supabase Auth でメール+パスワードのサインアップ・ログイン・パスワード再設定の3画面を作って」と頼むと、テンプレ的な画面が出ます。\n\nポイントは2つ。\n- メール確認リンク先を本番ドメインに合わせて Supabase 側で設定する\n- パスワード再設定の遷移は同一ドメイン内で完結させる（クロスドメインだと Cookie が消える）\n\n### ステップ3: ダッシュボードは「画面1つずつ」追加\n中級開発者ほど一気に作りたくなりますが、Lovable の場合は画面を1つずつ追加するほうがトラブルシュートが楽です。\n\n```\nダッシュボード /app/dashboard を追加してください。\n左サイドバーに「議事録一覧」「アップロード」「設定」の3メニュー。\nメイン領域は議事録一覧（テーブル: タイトル / 作成日 / 文字数 / 操作）。\nデータは supabase.from('minutes') から取得し、自分のものだけ表示。\n```\n\n機能を追加するたびに動作確認 → コミット → 次の機能、というリズムを守ります。\n\n### ステップ4: 課金はテンプレで割り切る\nMVP段階では Stripe Checkout のテンプレに乗るのが最速です。Lovable 内部では「Stripe Checkout のリンクを生成する関数」と「成功後リダイレクトページ」だけ作り、Webhook (`checkout.session.completed`) は Supabase Edge Functions で実装します。\n\n擬似コード:\n\n```ts\n// supabase/functions/stripe-webhook/index.ts\nserve(async (req) => {\n  const sig = req.headers.get(\"stripe-signature\")!;\n  const event = stripe.webhooks.constructEvent(await req.text(), sig, WEBHOOK_SECRET);\n  if (event.type === \"checkout.session.completed\") {\n    const userId = event.data.object.metadata?.user_id;\n    await supabase.from(\"subscriptions\").insert({ user_id: userId, plan: \"pro\" });\n  }\n  return new Response(\"ok\");\n});\n```\n\n### ステップ5: 捨てやすい構造を意識する\nMVP は捨てる前提で作ります。Lovable で生成されるコードは比較的素直な React/Next.js なので、ロジックを `lib/` 以下に集中させ、画面ファイル側は薄くしておくと、後から別フレームワークへの引っ越しが楽です。\n\n## よくある質問（FAQ）\n### Q1: Lovable と Bolt.new はどう使い分けますか？\nA1: UI の作り込みやコピーライティング寄りの調整は Lovable、フルスタックでバックエンドまで一括生成したい場合は Bolt.new、というのが2026年時点の感覚的な目安です。\n\n### Q2: Stripe ではなく Paddle や Lemon Squeezy でも作れますか？\nA2: 可能です。Webhook シークレットとイベント名を読み替えるだけで、フロント側の Checkout 誘導とリダイレクト処理はほぼ同じ構造で動きます。\n\n### Q3: 開発を途中で Lovable から離脱できますか？\nA3: できます。生成されたコードは GitHub 連携でエクスポートできるので、以後はローカルで通常の Next.js プロジェクトとして開発を続けられます。\n\n## まとめ\nLovable で SaaS MVP を作る際は「ランディング先行 → 認証 → ダッシュボード分割 → 課金は外部委譲」の順で進めると、1〜2日で検証用の有償β版まで到達できます。中級開発者は最初の構成図を意識し、捨てやすいコード配置で素早く検証サイクルを回しましょう。\n",
+  "meta_description": "Lovable で SaaS の MVP を最短で立ち上げるテンプレ手順を中級者向けに解説。ランディング・認証・課金・管理画面の分割設計と捨てやすいコード構造の作り方を紹介します。",
+  "tags": [
+    "Lovable",
+    "SaaS",
+    "MVP",
+    "Supabase",
+    "Stripe"
+  ],
+  "slug": "lovable-saas-mvp-template-2026",
+  "faq": [
+    {
+      "question": "Q1: Lovable と Bolt.new はどう使い分けますか？",
+      "answer": "UI の作り込みやコピーライティング寄りの調整は Lovable、フルスタックでバックエンドまで一括生成したい場合は Bolt.new、というのが2026年時点の感覚的な目安です。"
+    },
+    {
+      "question": "Q2: Stripe ではなく Paddle や Lemon Squeezy でも作れますか？",
+      "answer": "可能です。Webhook シークレットとイベント名を読み替えるだけで、フロント側の Checkout 誘導とリダイレクト処理はほぼ同じ構造で動きます。"
+    },
+    {
+      "question": "Q3: 開発を途中で Lovable から離脱できますか？",
+      "answer": "できます。生成されたコードは GitHub 連携でエクスポートできるので、以後はローカルで通常の Next.js プロジェクトとして開発を続けられます。"
+    }
+  ],
+  "hero_emoji": "📝",
+  "hero_gradient": "135deg",
+  "keyword": "Lovable",
+  "category": "Lovable 実践",
+  "generated_at": "2026-04-29T08:11:34.844711",
+  "seo_score": 85,
+  "jsonld": [
+    "<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"BlogPosting\",\n  \"headline\": \"Lovable AI で作るSaaS MVP 完全テンプレート2026\",\n  \"description\": \"Lovable で SaaS の MVP を最短で立ち上げるテンプレ手順を中級者向けに解説。ランディング・認証・課金・管理画面の分割設計と捨てやすいコード構造の作り方を紹介します。\",\n  \"url\": \"https://musclelove-777.github.io/lovable-guide/articles/lovable-saas-mvp-template-2026.html\",\n  \"datePublished\": \"2026-04-29T08:11:34.844711\",\n  \"dateModified\": \"2026-04-29T08:11:34.844711\",\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"wave35d-ai-articles\"\n  },\n  \"keywords\": \"Lovable, SaaS, MVP, Supabase, Stripe\",\n  \"articleSection\": \"Lovable 実践\",\n  \"inLanguage\": \"ja\"\n}\n</script>",
+    "<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"FAQPage\",\n  \"mainEntity\": [\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Q1: Lovable と Bolt.new はどう使い分けますか？\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"UI の作り込みやコピーライティング寄りの調整は Lovable、フルスタックでバックエンドまで一括生成したい場合は Bolt.new、というのが2026年時点の感覚的な目安です。\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Q2: Stripe ではなく Paddle や Lemon Squeezy でも作れますか？\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"可能です。Webhook シークレットとイベント名を読み替えるだけで、フロント側の Checkout 誘導とリダイレクト処理はほぼ同じ構造で動きます。\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Q3: 開発を途中で Lovable から離脱できますか？\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"できます。生成されたコードは GitHub 連携でエクスポートできるので、以後はローカルで通常の Next.js プロジェクトとして開発を続けられます。\"\n      }\n    }\n  ]\n}\n</script>",
+    "<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"BreadcrumbList\",\n  \"itemListElement\": [\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 1,\n      \"name\": \"ホーム\",\n      \"item\": \"https://musclelove-777.github.io/lovable-guide\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 2,\n      \"name\": \"Lovable 実践\",\n      \"item\": \"https://musclelove-777.github.io/lovable-guide/category/Lovable 実践\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 3,\n      \"name\": \"Lovable AI で作るSaaS MVP 完全テンプレート2026\"\n    }\n  ]\n}\n</script>"
+  ],
+  "has_affiliate": false,
+  "affiliate_count": 0
+}
